@@ -30,11 +30,13 @@ void pf(long long int n){
   }
   for(long long int i=2;i*i<=n;i++){
     if(n%i==0){
+      int cnt=0;
       while(n%i==0){
-        cout<<i<<" ";
         n/=i;
+        cnt++;
       }
+      cout<<i<<" "<<cnt<<endl;
     }
   }
-  if(n>1)cout<<n<<endl;
+  if(n>1)cout<<n<<" 1"<<endl;
 }
